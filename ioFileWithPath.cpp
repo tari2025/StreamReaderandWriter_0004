@@ -3,11 +3,6 @@
 #include <string>
 using namespace std;
 
-#include <fstream>
-#include <iostream>
-#include <string>
-using namespace std;
-
 int main()
 {
     string baris;
@@ -57,7 +52,7 @@ int main()
         // tutup file tersebut setelah selesai
         infile.close();
     }
-    // jika tidak ditemukan file maka akanmenampilkan ini
+    // jika tidak ditemukan file maka akan menampilkan ini
     else
         cout << "Unable to open file";
     return 0;
