@@ -42,3 +42,23 @@ int main()
     ifstream infile;
     // menunjuk ke sebuah file untuk memmbuka
     infile.open(namaFile + ".txt");
+
+    cout << endl
+         << ">= Membuka dan membaca file " << endl;
+    // jika tidak ada maka
+    if (infile.is_open())
+    {
+        // melakukan perulangan setiap baris
+        while (getline(infile, baris))
+        {
+            // dan tampilkan disini
+            cout << baris << '\n';
+        }
+        // tutup file tersebut setelah selesai
+        infile.close();
+    }
+    // jika tidak ditemukan file maka akanmenampilkan ini
+    else
+        cout << "Unable to open file";
+    return 0;
+}
